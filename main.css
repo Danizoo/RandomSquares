@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    display: grid;
+    grid: repeat(1.5, 1.5vw) / auto-flow;
+  }
+  
+  .row {
+    display: grid;
+    grid: repeat(1, 1.5vw) / auto-flow;
+  }
+  
+  .row > .square {
+    margin: 0px;
+    /* background: tomato; */
+  }
+  
+  @media (orientation: portrait) {
+    
+    .container {
+      transform: rotate(90deg) translate(50%);
+    }
+    
+    .row > .square {
+      transform: rotate(-90deg);
+    }
+  }
